@@ -24,15 +24,13 @@ const navItems = [
     label: 'Typography',
     href: '/typography',
     icon: Type,
-    description: 'Fonts & type scale',
-    disabled: true
+    description: 'Fonts & type scale'
   },
   {
     label: 'Spacing',
     href: '/spacing',
     icon: Maximize,
-    description: 'Spacing system',
-    disabled: true
+    description: 'Spacing system'
   },
   {
     label: 'Borders',
@@ -143,7 +141,7 @@ export function Sidebar() {
       {/* Footer */}
       <div className="p-4 border-t border-slate-800">
         <p className="text-xs text-slate-500 text-center">
-          Phase 1: Colors
+          Phase 2: Typography & Spacing
         </p>
       </div>
     </aside>
