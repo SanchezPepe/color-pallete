@@ -33,53 +33,46 @@ const navItems = [
     description: 'Spacing system'
   },
   {
-    label: 'Borders',
-    href: '/borders',
-    icon: Square,
-    description: 'Border radius & widths',
-    disabled: true
-  },
-  {
     label: 'Shadows',
     href: '/shadows',
     icon: Layers,
-    description: 'Shadow scale',
-    disabled: true
+    description: 'Shadow scale'
+  },
+  {
+    label: 'Borders',
+    href: '/borders',
+    icon: Square,
+    description: 'Border radius & widths'
   },
   {
     label: 'Gradients',
     href: '/gradients',
     icon: Blend,
-    description: 'Gradient builder',
-    disabled: true
+    description: 'Gradient builder'
   },
   {
     label: 'Motion',
     href: '/motion',
     icon: Zap,
-    description: 'Animation presets',
-    disabled: true
+    description: 'Animation presets'
   },
   {
     label: 'Preview',
     href: '/preview',
     icon: Eye,
-    description: 'Component preview',
-    disabled: true
+    description: 'Component preview'
   },
   {
     label: 'AI Assistant',
     href: '/assistant',
     icon: MessageSquare,
-    description: 'AI-powered suggestions',
-    disabled: true
+    description: 'AI-powered suggestions'
   },
   {
     label: 'Export',
     href: '/export',
     icon: Download,
-    description: 'Export design tokens',
-    disabled: true
+    description: 'Export design tokens'
   }
 ]
 
@@ -111,28 +104,16 @@ export function Sidebar() {
           return (
             <Link
               key={item.href}
-              to={item.disabled ? '#' : item.href}
+              to={item.href}
               className={cn(
                 "flex items-center gap-3 px-3 py-2 rounded-lg transition-colors",
                 isActive
                   ? "bg-rose-500/10 text-rose-400"
-                  : item.disabled
-                  ? "text-slate-600 cursor-not-allowed"
                   : "text-slate-400 hover:text-white hover:bg-slate-800"
               )}
-              onClick={(e) => item.disabled && e.preventDefault()}
             >
               <Icon className="w-5 h-5" />
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium">{item.label}</span>
-                  {item.disabled && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-500">
-                      Soon
-                    </span>
-                  )}
-                </div>
-              </div>
+              <span className="text-sm font-medium">{item.label}</span>
             </Link>
           )
         })}
@@ -141,7 +122,7 @@ export function Sidebar() {
       {/* Footer */}
       <div className="p-4 border-t border-slate-800">
         <p className="text-xs text-slate-500 text-center">
-          Phase 2: Typography & Spacing
+          Visual Identity Toolkit v1.0
         </p>
       </div>
     </aside>
