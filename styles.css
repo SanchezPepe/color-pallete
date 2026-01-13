@@ -19,8 +19,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 1.5rem;
-    background: #16213e;
-    border-bottom: 1px solid #0f3460;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
     z-index: 100;
 }
 
@@ -43,8 +43,8 @@ body {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 8px;
-    background: #0f3460;
-    color: #eee;
+    background: #f0f0f0;
+    color: #333;
     font-size: 0.875rem;
     font-weight: 500;
     cursor: pointer;
@@ -53,6 +53,7 @@ body {
 
 .btn:hover {
     background: #e94560;
+    color: #fff;
     transform: translateY(-1px);
 }
 
@@ -67,19 +68,88 @@ body {
     background: #d63855;
 }
 
+.generate-group {
+    display: flex;
+    gap: 0;
+}
+
+.generate-group .btn {
+    border-radius: 8px 0 0 8px;
+}
+
+.category-select {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 1px solid #ddd;
+}
+
+.category-select:hover {
+    background: #e0e0e0;
+}
+
+.category-select:focus {
+    outline: none;
+    background: #e0e0e0;
+}
+
+.category-select option {
+    background: #fff;
+    color: #333;
+}
+
+.preset-select {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.preset-select:hover {
+    background: #e0e0e0;
+}
+
+.preset-select:focus {
+    outline: none;
+    background: #e0e0e0;
+}
+
+.preset-select option {
+    background: #fff;
+    color: #333;
+}
+
+.preset-select optgroup {
+    background: #f5f5f5;
+    color: #e94560;
+    font-weight: 600;
+}
+
 .instructions {
     font-size: 0.8rem;
-    color: #888;
+    color: #666;
 }
 
 .instructions kbd {
     display: inline-block;
     padding: 0.2rem 0.5rem;
-    background: #0f3460;
+    background: #f0f0f0;
     border-radius: 4px;
     font-family: inherit;
     font-size: 0.75rem;
     color: #e94560;
+    border: 1px solid #ddd;
 }
 
 /* Palette Container */
@@ -416,6 +486,20 @@ body {
 
     .btn span {
         display: none;
+    }
+
+    .generate-group .btn {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .category-select {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .preset-select {
+        padding: 0.5rem;
+        font-size: 0.75rem;
     }
 
     .color-bar {

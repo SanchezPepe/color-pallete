@@ -13,10 +13,47 @@
             <h1>Palette Picker</h1>
         </div>
         <div class="toolbar-actions">
-            <button id="generate-btn" class="btn" title="Generate new palette (Spacebar)">
-                <i class="fas fa-shuffle"></i>
-                <span>Generate</span>
-            </button>
+            <div class="generate-group">
+                <button id="generate-btn" class="btn" title="Generate new palette (Spacebar)">
+                    <i class="fas fa-shuffle"></i>
+                    <span>Generate</span>
+                </button>
+                <select id="category-select" class="category-select" title="Palette style">
+                    <option value="random">Random</option>
+                    <option value="professional">Professional</option>
+                    <option value="vibrant">Vibrant</option>
+                    <option value="pastel">Pastel</option>
+                    <option value="warm">Warm</option>
+                    <option value="cool">Cool</option>
+                    <option value="earthy">Earthy</option>
+                    <option value="neon">Neon</option>
+                </select>
+            </div>
+            <select id="preset-select" class="preset-select" title="Load preset palette">
+                <option value="">Presets</option>
+                <optgroup label="Design Systems">
+                    <option value="material">Material</option>
+                    <option value="tailwind">Tailwind</option>
+                    <option value="bootstrap">Bootstrap</option>
+                </optgroup>
+                <optgroup label="Editor Themes">
+                    <option value="nord">Nord</option>
+                    <option value="dracula">Dracula</option>
+                    <option value="monokai">Monokai</option>
+                    <option value="solarized">Solarized</option>
+                </optgroup>
+                <optgroup label="Nature">
+                    <option value="sunset">Sunset</option>
+                    <option value="ocean">Ocean</option>
+                    <option value="forest">Forest</option>
+                    <option value="autumn">Autumn</option>
+                </optgroup>
+                <optgroup label="Trendy">
+                    <option value="synthwave">Synthwave</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="candy">Candy</option>
+                </optgroup>
+            </select>
             <button id="add-color-btn" class="btn" title="Add color">
                 <i class="fas fa-plus"></i>
                 <span>Add Color</span>
