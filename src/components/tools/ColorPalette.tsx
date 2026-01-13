@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect, useRef, useState } from 'react'
 import { useIdentityStore } from '@/store/identity'
 import { ColorBar } from './ColorBar'
@@ -16,7 +14,6 @@ import {
 } from '@/components/ui/select'
 import { Shuffle, Plus, Download } from 'lucide-react'
 import { ColorCategory } from '@/types'
-import { presetPalettes } from '@/lib/colors'
 import { toast } from 'sonner'
 
 const categories: { value: ColorCategory; label: string }[] = [

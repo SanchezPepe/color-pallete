@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useRef } from 'react'
 import { Copy, Lock, LockOpen, Trash2, GripVertical } from 'lucide-react'
 import { Color } from '@/types'

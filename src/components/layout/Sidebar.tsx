@@ -1,7 +1,4 @@
-"use client"
-
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { Link, useLocation } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import {
   Palette,
@@ -89,13 +86,14 @@ const navItems = [
 ]
 
 export function Sidebar() {
-  const pathname = usePathname()
+  const location = useLocation()
+  const pathname = location.pathname
 
   return (
     <aside className="w-64 bg-slate-900 border-r border-slate-800 flex flex-col">
       {/* Logo */}
       <div className="p-4 border-b border-slate-800">
-        <Link href="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-rose-500 to-purple-600 flex items-center justify-center">
             <Palette className="w-5 h-5 text-white" />
           </div>
@@ -115,7 +113,7 @@ export function Sidebar() {
           return (
             <Link
               key={item.href}
-              href={item.disabled ? '#' : item.href}
+              to={item.disabled ? '#' : item.href}
               className={cn(
                 "flex items-center gap-3 px-3 py-2 rounded-lg transition-colors",
                 isActive

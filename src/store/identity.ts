@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Color, ColorCategory, ColorPalette, ExportFormat } from '@/types';
+import { Color, ColorCategory, ExportFormat } from '@/types';
 import { generateRandomColor, generateId, presetPalettes } from '@/lib/colors';
 
 interface IdentityState {
